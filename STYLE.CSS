@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef1f5;
+    color: #1d2939;
+    min-height: 100vh;
+}
+
+.cabecalho {
+    background: linear-gradient(135deg, #102a43, #1d4e89);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    border-bottom: 5px solid #c62828;
+}
+
+.cabecalho h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.cabecalho p {
+    font-size: 15px;
+}
+
+.container {
+    width: 95%;
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    color: #12395b;
+    font-size: 21px;
+    margin-bottom: 18px;
+    border-left: 5px solid #c62828;
+    padding-left: 10px;
+}
+
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #c5ccd5;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.opcoes-modalidade {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.opcao {
+    flex: 1;
+    min-width: 220px;
+    padding: 18px;
+    border: 2px solid #d5dce5;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #f8fafc;
+    font-weight: bold;
+}
+
+.opcao input {
+    margin-right: 8px;
+}
+
+.escondido {
+    display: none;
+}
+
+.grade-meses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.mes {
+    position: relative;
+    min-height: 75px;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    background: #f8fafc;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mes.selecionado {
+    background: #dcecff;
+    border-color: #1d4e89;
+}
+
+.numero-preferencia {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    width: 25px;
+    height: 25px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #c62828;
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.mes.selecionado .numero-preferencia {
+    display: flex;
+}
+
+.legenda,
+.resumo {
+    margin: 15px 0;
+    padding: 12px;
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+.legenda {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.botao-principal,
+.botao-secundario {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-principal {
+    background: #c62828;
+    font-size: 18px;
+}
+
+.botao-secundario {
+    background: #64748b;
+}
+
+.area-botao {
+    text-align: center;
+    margin: 25px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 22px;
+    background: #102a43;
+    color: white;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .cabecalho h1 {
+        font-size: 22px;
+    }
+
+    .grade-meses {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .mes {
+        min-height: 65px;
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plano de Férias 2027</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <h1>PLANO DE FÉRIAS 2027</h1>
+        <p>4º & 6º GP/PM</p>
+        <p>Planejamento hoje, uma equipe sempre mais forte</p>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Identificação do policial</h2>
+
+            <label for="policial">Selecione seu nome:</label>
+
+            <select id="policial">
+                <option value="">Selecione...</option>
+                <option>CB PM COSTA</option>
+                <option>CB PM CRISTIANO</option>
+                <option>CB PM MORETTI</option>
+                <option>CB PM MARTINS</option>
+                <option>CB PM BORELA</option>
+                <option>SD PM FERRO</option>
+                <option>SD PM FRANÇA</option>
+                <option>SD PM FABRICIO</option>
+            </select>
+        </section>
+
+        <section class="card">
+            <h2>Modalidade das férias</h2>
+
+            <label class="opcao">
+                <input type="radio" name="modalidade" value="30">
+                30 dias corridos
+            </label>
+
+            <label class="opcao">
+                <input type="radio" name="modalidade" value="15+15">
+                Férias fracionadas — 15 + 15 dias
+            </label>
+        </section>
+
+        <!-- MODALIDADE DE 30 DIAS -->
+
+        <section id="area30" class="card escondido">
+
+            <h2>Preferência dos meses</h2>
+
+            <p>
+                Selecione 3 meses em ordem de preferência.
+            </p>
+
+            <div class="legenda">
+                1 = 1ª preferência |
+                2 = 2ª preferência |
+                3 = 3ª preferência
+            </div>
+
+            <div id="meses" class="grade-meses"></div>
+
+            <div id="resumoMeses" class="resumo">
+                Nenhum mês selecionado.
+            </div>
+
+            <button id="limparMeses" class="botao-secundario">
+                Limpar escolhas
+            </button>
+
+        </section>
+
+        <!-- MODALIDADE FRACIONADA -->
+
+        <section id="areaFracionada" class="card escondido">
+
+            <h2>Férias fracionadas — 15 + 15 dias</h2>
+
+            <p>
+                O início dos períodos poderá ser somente no dia 1º ou no dia 15.
+            </p>
+
+            <div id="preferenciasFracionadas"></div>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Observações</h2>
+
+            <textarea id="observacoes"
+                placeholder="Digite alguma observação, se necessário..."></textarea>
+
+        </section>
+
+        <div class="area-botao">
+
+            <button id="btnEnviar" class="botao-principal">
+                Finalizar escolha
+            </button>
+
+            <p id="mensagem"></p>
+
+        </div>
+
+    </main>
+
+    <footer>
+        4º & 6º GP/PM — Plano de Férias 2027
+    </footer>
+
+    <script src="JS/script.js"></script>
+
+</body>
+
+</html>
