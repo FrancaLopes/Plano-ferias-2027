@@ -198,3 +198,20 @@ footer {
         padding: 18px;
     }
 }
+
+@media (max-width: 600px) {
+    .opcao {
+        display: flex !important;
+        align-items: center;
+        width: 100% !important;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        padding: 12px;
+        flex-wrap: wrap;
+    }
+
+    .opcao input {
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+}
