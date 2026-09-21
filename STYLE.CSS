@@ -217,25 +217,34 @@ footer {
 }
 @media (max-width: 600px) {
     body {
+        width: 100%;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
     }
 
-    .cabecalho img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .container {
-        width: 100%;
-        padding: 10px;
+    .cabecalho {
+        width: 100% !important;
+        max-width: 100% !important;
         box-sizing: border-box;
     }
 
+    .cabecalho img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    main.container {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        padding: 10px !important;
+    }
+
     .card {
-        width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
         box-sizing: border-box;
     }
 }
